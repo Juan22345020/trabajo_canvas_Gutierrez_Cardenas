@@ -53,35 +53,25 @@ c=Canvas(frame_graficacion, width=BASE, height=ALTURA)
 c.config(bg="green")
 c.place(x=10, y=10)
 
+photo= PhotoImage(file="cancha.png")
+c.create_image(0,0, image=photo, anchor=NW)
 
 
-#LINEAS DE LA CANCHA
-linea1=c.create_line(10,10, BASE-10,10, fill="white",width=10)
-linea2=c.create_line(BASE-10,10,BASE-10, ALTURA-10, fill="white",width=10)
-linea3=c.create_line(BASE-10, ALTURA-10,10,ALTURA-10,fill="white",width=10)
-linea4=c.create_line(10, ALTURA-10,10,10, fill="white",width=10)
-linea5=c.create_line(BASE-177,10,BASE-177, ALTURA-10, fill="white",width=10)
-linea6=c.create_line(BASE-59,ALTURA-140,BASE-59, ALTURA-70, fill="white",width=10)
-linea7=c.create_line(BASE-296,ALTURA-140,BASE-296, ALTURA-70, fill="white",width=10)
-linea8=c.create_line(ALTURA-210,80,BASE-295,80, fill="white",width=10)
-linea9=c.create_line(ALTURA-210,149,BASE-295,149, fill="white",width=10)
-linea10=c.create_line(ALTURA+125,80,BASE-60,80, fill="white",width=10)
-linea11=c.create_line(ALTURA+125,149,BASE-60,149, fill="white",width=10)
-circle=c.create_oval(BASE/2-30,ALTURA/2-30,BASE/2 +30,ALTURA/2+30, fill="white")
 
 
-# Definir el radio y coordenadas del óvalo
+
+#
 radio = 20
 x0 = BASE/2 - radio
 y0 = ALTURA/2 - radio
 x1 = BASE/2 + radio
 y1 = ALTURA/2 + radio
 
-pelota = c.create_oval(x0, y0, x1, y1, fill="grey")
+pelota = c.create_oval(x0, y0, x1, y1, fill="DarkSeaGreen2")
 
 
 
-#BOTON DE MOVER PELOTA
+
 boton = Button(frame_graficacion, text="Mover Balón", command=mover_pelota)
 boton.place(x=130, y=280, width=100, height=20)
 
